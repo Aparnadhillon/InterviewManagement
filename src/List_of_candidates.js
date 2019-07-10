@@ -53,7 +53,7 @@ export default class List_of_candidates extends Component {
          return <View key={key} style={styles.item}>
         <ScrollView style={styles.scrollContainer}>
 
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate("Create")}>
+      
 
          <View style={styles.messageBox}>
          <Text style={styles.messageBoxText}>{val.name}</Text>    
@@ -62,7 +62,7 @@ export default class List_of_candidates extends Component {
          <Text style={styles.messageBoxText}>{val.emailid}</Text> 
          </View>   
 
-        </TouchableOpacity> 
+      
 
         </ScrollView>  
          </View>
@@ -71,13 +71,13 @@ export default class List_of_candidates extends Component {
     <View style={styles.container}>
 
     {candidate}
-    
+      <TouchableOpacity onPress={()=>this.props.navigation.navigate("Job_details")}>
     <View style={styles.buttonContainer}>
     <Button
      title="Create Job"
      color="#841584"/>
      </View>
-    
+       </TouchableOpacity>
     </View>  
   )
   }
